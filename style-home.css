@@ -1,0 +1,47 @@
+body{
+    background: #E9ECF8;
+}
+button{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+
+}
+
+#texto{
+    position: absolute;
+    width: 680px;
+    height: 48px;
+    left: 240px;
+    top: 168px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    
+    color: #0A3871;
+}
+
+#crip{
+    background: #0A3871;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#descrip{
+    box-sizing: border-box;
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}

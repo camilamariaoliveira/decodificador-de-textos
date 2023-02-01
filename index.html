@@ -12,21 +12,42 @@
         <header>
             <img id="logo" src="imagens/Vectorlogo.png">
         </header>
-        
-        <main>
-            <input type=”text” id="texto" placeholder="Digite seu texto">
+        <script>
+                        
+            function traduzido(){
+                document.getElementById("procurando").style.display ="none";        
+            }
+            function criptografar(){
+                var mensagem = document.getElementById("texto").value;
+                var tradução = 
+                traduzido();
+                mensagem = mensagem.replaceAll("a","ai");
+                mensagem = mensagem.replaceAll("e", "enter");
+                mensagem = mensagem.replaceAll("i", "imes");
+                mensagem = mensagem.replaceAll("o", "ober");
+                mensagem = mensagem.replaceAll("u", "ufat");
+                console.log(mensagem)
+
+            }
+            function descriptografar(){
+                var mensagem = document.getElementById("texto").value;
+                traduzido();
+            }
             
+        </script>
+        <form>
+            <input type=”text” name="texto" id="texto" required placeholder="Digite seu texto">
+        </form>
+        <main>
             <p id="aviso"> <img src="imagens/Vectoraviso.png"> Apenas letras minúsculas e sem acento.</p>
 
-            <button id="crip">Criptografar</button>
-            <button id="descrip">Descriptografar</button>
+            <button onclick="criptografar()" id="crip">Criptografar</button>
+            <button onclick="descriptografar()" id="descrip">Descriptografar</button>
 
             <div class="translate">
                 <img id="procurando" src="imagens/High quality products 1 1procurar.png">
             </div>
-            
         </main>
-
     </body>
 
     <footer>

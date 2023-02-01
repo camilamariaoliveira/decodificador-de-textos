@@ -13,27 +13,39 @@
             <img id="logo" src="imagens/Vectorlogo.png">
         </header>
         <script>
-                        
+            var resultadoAnterior;          
             function traduzido(){
                 document.getElementById("procurando").style.display ="none";        
             }
             function criptografar(){
                 var mensagem = document.getElementById("texto").value;
-                var tradução = 
                 traduzido();
                 mensagem = mensagem.replaceAll("a","ai");
                 mensagem = mensagem.replaceAll("e", "enter");
                 mensagem = mensagem.replaceAll("i", "imes");
                 mensagem = mensagem.replaceAll("o", "ober");
                 mensagem = mensagem.replaceAll("u", "ufat");
-                console.log(mensagem)
-
+                mostraResultado(mensagem);
             }
             function descriptografar(){
                 var mensagem = document.getElementById("texto").value;
                 traduzido();
+                mensagem = mensagem.replaceAll("ai","a");
+                mensagem = mensagem.replaceAll("enter", "e");
+                mensagem = mensagem.replaceAll("imes", "i");
+                mensagem = mensagem.replaceAll("ober", "o");
+                mensagem = mensagem.replaceAll("ufat", "u");
             }
-            
+            function mostraResultado(mensagem){
+                var paragrafo = document.getElementById("resultado");
+                var text = document.createTextNode(mensagem);
+                if (paragrafo.childNodes.length>1){
+                    paragrafo.replaceChild(text,resultadoAnterior);
+                } else{ 
+                    paragrafo.appendChild(text);
+                    resultadoAnterior = text;
+                }
+            }
         </script>
         <form>
             <input type=”text” name="texto" id="texto" required placeholder="Digite seu texto">
@@ -44,8 +56,11 @@
             <button onclick="criptografar()" id="crip">Criptografar</button>
             <button onclick="descriptografar()" id="descrip">Descriptografar</button>
 
-            <div class="translate">
+            <div class="traducao">
                 <img id="procurando" src="imagens/High quality products 1 1procurar.png">
+                <p id="resultado">
+                
+                </p>
             </div>
         </main>
     </body>

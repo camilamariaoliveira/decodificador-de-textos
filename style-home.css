@@ -1,47 +1,81 @@
 body{
     background: #E9ECF8;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;   
 }
-button{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 24px;
-    gap: 8px;
-
-    width: 328px;
-    height: 67px;
-    border-radius: 24px;
-
+#logo{
+    margin-top: 20px;
+    margin-left: 50px;
 }
-
 #texto{
     position: absolute;
-    width: 680px;
-    height: 48px;
     left: 240px;
     top: 168px;
-
-    font-family: 'Inter';
+    background-color: #E9ECF8;
+    border: none;
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
     line-height: 150%;
-    
     color: #0A3871;
 }
-
+button{
+    position: absolute;
+    justify-content: space-evenly;
+    padding: 24px;
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    cursor: pointer;
+    bottom: 10%;
+}
 #crip{
     background: #0A3871;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+    left: 10%;
 }
-
 #descrip{
     box-sizing: border-box;
     background: #D8DFE8;
     border: 1px solid #0A3871;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
+    left: 38%;
+}
+#aviso{
+    position: absolute;
+    margin-left: 80px;
+    bottom: 25%;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 150%;
+    color: #495057;
+    opacity: 0.8;
+}
+#resultado{
+    background: #FFFFFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    position: absolute;
+    width: 350px;
+    height: 80%;
+    right: 5%;
+    top: 72px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+}
+#procurando{
+    position: absolute;
+    right: 5%;
+    top: 150px;
+}
+footer{
+    font-size: medium;
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    height: 8%;
+    text-align: center;
+    background-color: #052051;
+    color: #CED4DA;
 }

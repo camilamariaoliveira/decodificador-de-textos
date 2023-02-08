@@ -4,6 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Decodificador</title>
+        <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style-home.css">
     </head>
@@ -35,6 +36,7 @@
                 mensagem = mensagem.replaceAll("imes", "i");
                 mensagem = mensagem.replaceAll("ober", "o");
                 mensagem = mensagem.replaceAll("ufat", "u");
+                mostraResultado(mensagem);
             }
             function mostraResultado(mensagem){
                 var paragrafo = document.getElementById("resultado");
@@ -48,26 +50,24 @@
             }
         </script>
         <form>
-            <input type=”text” name="texto" id="texto" required placeholder="Digite seu texto">
+            <input type=”text” name="texto" id="texto" placeholder="Digite seu texto" pattern="[a-z]+$" required>
         </form>
         <main>
-            <p id="aviso"> <img src="imagens/Vectoraviso.png"> Apenas letras minúsculas e sem acento.</p>
+            <section>
+                <p id="aviso"> <img src="imagens/Vectoraviso.png"> Apenas letras minúsculas e sem acento.</p>
 
-            <button onclick="criptografar()" id="crip">Criptografar</button>
-            <button onclick="descriptografar()" id="descrip">Descriptografar</button>
-
-            <div class="traducao">
-                <img id="procurando" src="imagens/High quality products 1 1procurar.png">
+                <button onclick="criptografar()" id="crip">Criptografar</button>
+                <button onclick="descriptografar()" id="descrip">Descriptografar</button>   
+            </section>
+            <section>
                 <p id="resultado">
                 
                 </p>
-            </div>
+                <img id="procurando" src="imagens/High quality products 1 1procurar.png">
+            </section>
         </main>
     </body>
-
     <footer>
-        <p>Sabe quem desenvolveu esse site? Clica aqui para saber mais! Lá da até pra descobrir como foi acontecendo!</p>
+        <p>Sabe quem desenvolveu esse site? Foi a <a style="color: #CED4DA;" href="https://www.linkedin.com/in/camilamariaoliveira/">Camila Oliveira.</a> Nesse <a style="color: #CED4DA;" href="https://github.com/camilamariaoliveira/decodificador-de-textos">link</a> da até pra descobrir como foi acontecendo!</p>
     </footer>
-
-
 </html>

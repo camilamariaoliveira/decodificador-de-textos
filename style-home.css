@@ -20,7 +20,7 @@ body{
     font-size: 32px;
     line-height: 150%;
     color: #0A3871;
-}
+}      
 button{
     position: absolute;
     justify-content: space-evenly;
@@ -52,6 +52,7 @@ button{
     opacity: 0.8;
 }
 #resultado{
+    resize: none;
     background: #FFFFFF;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
@@ -64,6 +65,11 @@ button{
     font-size: 24px;
     line-height: 150%;
 }
+#copyButton{
+    right: 10%;
+    width: 200px;
+    }
+    
 #procurando{
     position: absolute;
     right: 5%;

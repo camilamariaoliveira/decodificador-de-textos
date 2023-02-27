@@ -13,46 +13,11 @@
         <header>
             <img id="logo" src="imagens/Vectorlogo.png">
         </header>
-        <script>
-            var resultadoAnterior;          
-            function traduzido(){
-                document.getElementById("procurando").style.display ="none";        
-            }
-            function criptografar(){
-                var mensagem = document.getElementById("texto").value;
-                traduzido();
-                mensagem = mensagem.replaceAll("a","ai");
-                mensagem = mensagem.replaceAll("e", "enter");
-                mensagem = mensagem.replaceAll("i", "imes");
-                mensagem = mensagem.replaceAll("o", "ober");
-                mensagem = mensagem.replaceAll("u", "ufat");
-                mostraResultado(mensagem);
-            }
-            function descriptografar(){
-                var mensagem = document.getElementById("texto").value;
-                traduzido();
-                mensagem = mensagem.replaceAll("ai","a");
-                mensagem = mensagem.replaceAll("enter", "e");
-                mensagem = mensagem.replaceAll("imes", "i");
-                mensagem = mensagem.replaceAll("ober", "o");
-                mensagem = mensagem.replaceAll("ufat", "u");
-                mostraResultado(mensagem);
-            }
-            function mostraResultado(mensagem){
-                var paragrafo = document.getElementById("resultado");
-                var text = document.createTextNode(mensagem);
-                if (paragrafo.childNodes.length>1){
-                    paragrafo.replaceChild(text,resultadoAnterior);
-                } else{ 
-                    paragrafo.appendChild(text);
-                    resultadoAnterior = text;
-                }
-            }
-        </script>
-        <form>
-            <input type=”text” name="texto" id="texto" placeholder="Digite seu texto" pattern="[a-z]+$" required>
-        </form>
+        <script type="text/javascript" src="script.js"></script>
         <main>
+            <form>
+                <input type=”text” name="texto" id="texto" placeholder="Digite seu texto" pattern="[a-z]+">
+            </form>
             <section>
                 <p id="aviso"> <img src="imagens/Vectoraviso.png"> Apenas letras minúsculas e sem acento.</p>
 
@@ -60,13 +25,16 @@
                 <button onclick="descriptografar()" id="descrip">Descriptografar</button>   
             </section>
             <section>
-                <p id="resultado">
-                
-                </p>
+
+                <textarea id="resultado" cols="15" rows="10" readonly > </textarea>
+
                 <img id="procurando" src="imagens/High quality products 1 1procurar.png">
+
+                <button onclick="copiarTexto()" id="copyButton">Copiar</button>
             </section>
         </main>
     </body>
+    
     <footer>
         <p>Sabe quem desenvolveu esse site? Foi a <a style="color: #CED4DA;" href="https://www.linkedin.com/in/camilamariaoliveira/">Camila Oliveira.</a> Nesse <a style="color: #CED4DA;" href="https://github.com/camilamariaoliveira/decodificador-de-textos">link</a> da até pra descobrir como foi acontecendo!</p>
     </footer>

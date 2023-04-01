@@ -20,15 +20,14 @@
                 <p id="mensagemErro"></p>
             </form>
             <section>
-                <p id="aviso"> <img src="imagens/Vectoraviso.png"> Apenas letras minúsculas e sem acento.</p>
-                <button onclick="botaoCriptografar()" id="crip">Criptografar</button>
-                <button onclick="botaoDescriptografar()" id="descrip">Descriptografar</button>
+                <textarea id="resultado" cols="15" rows="10" readonly > </textarea>
+                <img id="procurando" src="imagens/High quality products 1 1procurar.png">
             </section>
             <section>
-                <textarea id="resultado" cols="15" rows="10" readonly > </textarea>
+                <p id="aviso"> <img src="imagens/Vectoraviso.png"> Apenas letras minúsculas e sem acento.</p>
 
-                <img id="procurando" src="imagens/High quality products 1 1procurar.png">
-
+                <button onclick="botaoCriptografar()" id="crip">Criptografar</button>
+                <button onclick="botaoDescriptografar()" id="descrip">Descriptografar</button>
                 <button onclick="copiarTexto()" id="copyButton">Copiar</button>
             </section>
         </main>

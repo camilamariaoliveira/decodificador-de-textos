@@ -6,81 +6,86 @@ body{
     line-height: 150%;   
 }
 #logo{
-    margin-top: 20px;
-    margin-left: 50px;
+    margin-top: 4vh;
+    margin-left: 4vw;
 }
 #texto{
     position: absolute;
-    left: 240px;
-    top: 168px;
+    left: 10em;
+    top: 5em;
     background-color: #E9ECF8;
     border: none;
-    font-style: normal;
     font-weight: 400;
     font-size: 32px;
-    line-height: 150%;
     color: #0A3871;
-}      
-button{
-    position: absolute;
-    justify-content: space-evenly;
-    padding: 24px;
-    width: 328px;
-    height: 67px;
-    border-radius: 24px;
-    cursor: pointer;
-    bottom: 10%;
 }
-#crip{
-    background: #0A3871;
-    left: 10%;
-}
-#descrip{
-    box-sizing: border-box;
-    background: #D8DFE8;
-    border: 1px solid #0A3871;
-    left: 38%;
-}
-#aviso{
-    position: absolute;
-    margin-left: 80px;
-    bottom: 25%;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 150%;
-    color: #495057;
-    opacity: 0.8;
+#mensagemErro{
+    text-align: center;
+    font-size: medium;
+    color: red;
 }
 #resultado{
     resize: none;
+    padding: 2em;
     background: #FFFFFF;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
     position: absolute;
-    width: 350px;
-    height: 80%;
-    right: 5%;
-    top: 72px;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 150%;
+    width: 25em;
+    height: 80vh;
+    left: 65svw;
+    top: 2em;
 }
-#copyButton{
-    right: 10%;
-    width: 200px;
-    }
-    
 #procurando{
     position: absolute;
-    right: 5%;
-    top: 150px;
+    width: 10em;
+    height: 10em;
+    left: 68vw;
+    top: 3em;
+}
+#aviso{
+    position: absolute;
+    margin-left: 5em;
+    bottom: 30vh;
+    font-size: 15px;
+    color: #495057;
+    opacity: 0.8;
+}
+button{
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: end;
+    padding: 24px;
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    gap: 8px;
+    cursor: pointer;
+    margin: 65svh 3vw 8em;
+}
+button:hover{
+    transform: scale(1.05);
+    transition: all 0.5s;
+}
+#crip{
+    background: #0A3871;
+}
+#descrip{
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+}
+#copyButton{
+    position: absolute;
+    background: #FFFFFF;
+    align-self: flex-end;
+    left: 64vw;
 }
 footer{
     font-size: medium;
     position:fixed;
     bottom: 0;
     width: 100%;
-    height: 8%;
+    height: 3em;
     text-align: center;
     background-color: #052051;
     color: #CED4DA;

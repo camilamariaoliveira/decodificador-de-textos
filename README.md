@@ -48,6 +48,17 @@ O resultado deve ser exibido na tela.
 
 <img src="imagens/demo.gif">
 
+<h3>Como rodar a aplicação ▶️ </h3>
+
+No terminal, do seu computador ou até mesmo na IDE utilizada, você iniciará o git com o comando "git init", em seguida fará o clone do projeto. 
+Para clonar um repositório com o Git, selecione o repositório que deseja clonar, copie a URL do repositório (ou no botão verde com <>CODE, selecione a opção https), digite na linha de comando com o comando "git clone *url-do-repositório*", exemplo :
+
+git clone https://github.com/camilamariaoliveira/decodificador-de-textos
+
+ou se você tiver SSH configurado na sua máquina:
+
+git clone git@github.com:camilamariaoliveira/decodificador-de-textos.git
+
 <h3>Find Me:</h3>
 https://github.com/camilamariaoliveira
 
